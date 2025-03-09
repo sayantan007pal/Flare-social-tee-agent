@@ -7,7 +7,86 @@ A verifiably autonomous social AI agent for the Flare Network that operates with
 
 This project implements a secure X (Twitter) account management system with comprehensive social media monitoring capabilities. The agent uses vector embedding models for intelligent tweet classification and responds to Flare-related queries using AI models while maintaining verifiable autonomy through TEE attestations.
 
-![Architecture Overview](https://your-repo-url/assets/architecture-diagram.svg)
+![Architecture Overview]<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa" />
+  
+  <!-- TEE Container -->
+  <rect x="50" y="50" width="700" height="500" rx="10" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" stroke-dasharray="5,5" />
+  <text x="400" y="80" font-family="Arial" font-size="16" text-anchor="middle" fill="#1890ff">Trusted Execution Environment (TEE)</text>
+  
+  <!-- X Account Manager -->
+  <rect x="100" y="120" width="180" height="100" rx="5" fill="#fff" stroke="#1890ff" stroke-width="2" />
+  <text x="190" y="150" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">X Account Manager</text>
+  <text x="190" y="175" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">Authentication</text>
+  <text x="190" y="195" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">API Interaction</text>
+  
+  <!-- Social Media Monitor -->
+  <rect x="320" y="120" width="180" height="100" rx="5" fill="#fff" stroke="#1890ff" stroke-width="2" />
+  <text x="410" y="150" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">Social Media Monitor</text>
+  <text x="410" y="175" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">Stream Processing</text>
+  <text x="410" y="195" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">Vector Embeddings</text>
+  
+  <!-- AI Processing -->
+  <rect x="540" y="120" width="180" height="100" rx="5" fill="#fff" stroke="#1890ff" stroke-width="2" />
+  <text x="630" y="150" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">AI Processing</text>
+  <text x="630" y="175" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">Gemini Models</text>
+  <text x="630" y="195" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">Classification Logic</text>
+  
+  <!-- Safety Filters -->
+  <rect x="100" y="260" width="180" height="100" rx="5" fill="#fff" stroke="#1890ff" stroke-width="2" />
+  <text x="190" y="290" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">Safety Filters</text>
+  <text x="190" y="315" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">Content Moderation</text>
+  <text x="190" y="335" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">Response Verification</text>
+  
+  <!-- Response Generator -->
+  <rect x="320" y="260" width="180" height="100" rx="5" fill="#fff" stroke="#1890ff" stroke-width="2" />
+  <text x="410" y="290" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">Response Generator</text>
+  <text x="410" y="315" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">Tweet Composition</text>
+  <text x="410" y="335" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">Context Management</text>
+  
+  <!-- Smart Contract Integration -->
+  <rect x="540" y="260" width="180" height="100" rx="5" fill="#fff" stroke="#1890ff" stroke-width="2" />
+  <text x="630" y="290" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">Smart Contract</text>
+  <text x="630" y="315" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">TeeV1Verifier</text>
+  <text x="630" y="335" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">Attestation Logic</text>
+  
+  <!-- Attestation Manager -->
+  <rect x="210" y="400" width="380" height="100" rx="5" fill="#fff" stroke="#1890ff" stroke-width="2" />
+  <text x="400" y="430" font-family="Arial" font-size="14" text-anchor="middle" fill="#000">Attestation Manager</text>
+  <text x="400" y="455" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">vTPM Attestations</text>
+  <text x="400" y="475" font-family="Arial" font-size="12" text-anchor="middle" fill="#555">Remote Verification</text>
+  
+  <!-- Connection Lines -->
+  <!-- X Account Manager to Social Media Monitor -->
+  <line x1="280" y1="170" x2="320" y2="170" stroke="#1890ff" stroke-width="2" />
+  <!-- Social Media Monitor to AI Processing -->
+  <line x1="500" y1="170" x2="540" y2="170" stroke="#1890ff" stroke-width="2" />
+  <!-- AI Processing to Safety Filters -->
+  <line x1="630" y1="220" x2="630" y2="240" stroke="#1890ff" stroke-width="2" />
+  <line x1="630" y1="240" x2="190" y2="240" stroke="#1890ff" stroke-width="2" />
+  <line x1="190" y1="240" x2="190" y2="260" stroke="#1890ff" stroke-width="2" />
+  <!-- Safety Filters to Response Generator -->
+  <line x1="280" y1="310" x2="320" y2="310" stroke="#1890ff" stroke-width="2" />
+  <!-- Response Generator to Smart Contract Integration -->
+  <line x1="500" y1="310" x2="540" y2="310" stroke="#1890ff" stroke-width="2" />
+  <!-- All to Attestation Manager -->
+  <line x1="190" y1="360" x2="190" y2="380" stroke="#1890ff" stroke-width="2" />
+  <line x1="190" y1="380" x2="400" y2="380" stroke="#1890ff" stroke-width="2" />
+  <line x1="400" y1="380" x2="400" y2="400" stroke="#1890ff" stroke-width="2" />
+  <line x1="410" y1="360" x2="410" y2="380" stroke="#1890ff" stroke-width="2" />
+  <line x1="630" y1="360" x2="630" y2="380" stroke="#1890ff" stroke-width="2" />
+  <line x1="630" y1="380" x2="400" y2="380" stroke="#1890ff" stroke-width="2" />
+  
+  <!-- Flare Network Connection -->
+  <line x1="630" y1="360" x2="700" y2="380" stroke="#1890ff" stroke-width="2" />
+  <text x="715" y="385" font-family="Arial" font-size="12" text-anchor="middle" fill="#1890ff">Flare Network</text>
+  
+  <!-- External Twitter Icon -->
+  <line x1="190" y1="120" x2="190" y2="100" stroke="#1890ff" stroke-width="2" />
+  <text x="190" y="95" font-family="Arial" font-size="12" text-anchor="middle" fill="#1890ff">X Platform</text>
+</svg>
+
 
 ## Features
 
