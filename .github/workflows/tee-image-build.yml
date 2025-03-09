@@ -40,3 +40,5 @@ jobs:
         platform: managed
         confidential: true
         flags: --machine-type=n2d-standard-2
+       
+        
