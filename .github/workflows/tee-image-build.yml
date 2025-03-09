@@ -2,13 +2,27 @@ name: Build and Deploy TEE Image
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.sayantanpal100prism}}
+          password: ${{ secrets.P@ssw0rd }}
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t your-image-name .
+          docker push your-image-name
     
     steps:
     - uses: actions/checkout@v2
